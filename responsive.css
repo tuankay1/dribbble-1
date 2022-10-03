@@ -41,7 +41,7 @@
     .image-div {
         width: 100%;
         height: 670px;
-        background: url(meeting.jpg);
+        background: url(img/meeting.jpg);
         background-position: center;
         background-size: cover;
         filter: grayscale(100%);

@@ -27,20 +27,36 @@ nav {
 }
 nav ul {
     display: inline-flex;
-   list-style: none;
-   padding: 20px 0;
-   
+   padding: 20px 0;  
 }
 nav ul li {
+    display: inline-block;
+    list-style: none;
     text-decoration: none;
     margin: 0 20px;
+    position: relative;
+}
+ul li:hover {
+    cursor: pointer;
+}
+ul li::after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    height: 3px;
+    left: 0;
+    width: 0;
+    background: #df4881;
+    transition: ease 1s;
+}
+ul li:hover::after{
+    width: 100%;
 }
 .logo {
     list-style: none;
     text-decoration: none;
     font-size: 48px;
     font-weight: 900;
-   
 }
 .features {
     font-weight: 600
@@ -383,8 +399,8 @@ footer ul li {
     text-decoration: none;
     margin: 0 15px;
     font-weight: 600;
-    font-size: 14px;
-    
+    font-size: 14px;   
+    position: relative;
 }
 .icons{
     display: flex;
